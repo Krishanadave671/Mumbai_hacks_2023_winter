@@ -33,7 +33,7 @@ export default function UploadForm() {
           </div>
         </div>
       )}
-      <label className="bg-[#7569FF] py-3 px-8 rounded-[20px] inline-flex gap-2 cursor-pointer">
+      <label className="bg-[#7569FF] py-3 px-6 rounded-[20px] inline-flex gap-2 cursor-pointer">
         {/* <UploadIcon /> */}
         <span>Connect Account</span>
         <input onChange={upload} type="file" className="hidden" />
