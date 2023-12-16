@@ -3,6 +3,8 @@ import PageHeaders from "@/components/PageHeaders";
 import UploadForm from "@/components/UploadForm";
 import Image from "next/image";
 import "./globals.css";
+import { TryNow } from "@/components/TryNow";
+
 export default function Home() {
   return (
     <>
@@ -16,15 +18,7 @@ export default function Home() {
       <div className="text-center">
         <UploadForm />
       </div>
-
-      <DemoSection />
-      {/* <Image
-        className="absolute top-[110%] left-0 opacity-25 z-[-100] translate-y-[-0%]"
-        src="/tiles-bg.png"
-        alt="tiles bg"
-        width={275}
-        height={225}
-      /> */}
+      <TryNow />
     </>
   );
 }

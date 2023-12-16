@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3001",
-    "start": "next start -p 3001",
+    "dev": "next dev",
+    "start": "next start",
     "build": "next build",
     "lint": "next lint"
   },
@@ -16,9 +16,11 @@
     "@ffmpeg/util": "^0.12.1",
     "aws-crt": "^1.18.0",
     "axios": "^1.5.1",
+    "co-body": "^6.1.0",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
+    "social-post-api": "^1.1.1",
     "typeface-poppins": "^1.1.13",
     "uniqid": "^5.4.0"
   },
