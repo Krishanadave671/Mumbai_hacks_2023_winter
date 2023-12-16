@@ -26,24 +26,27 @@ input[type="color"]::-moz-color-swatch {
   border: 2px solid black;
 }
 
-/* styles.css (or within your Tailwind CSS file) */
-
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+.input-repo {
+	width: 50vw;
 }
 
-.bg-gradient-animation {
-  width: 100%;
-  height: 100vh; /* Adjust the height as needed */
-  background: linear-gradient(-45deg, #ffffff, #f0f0f0, #ffffff);
-  background-size: 200% 200%;
-  animation: gradientAnimation 8s infinite;
+.input-repo input#repo-link {
+	color: #333333;
+	width: 100%;
+	padding: 0.95rem 1.5rem;
+	font-family: Inter;
+	font-size: 1.2rem;
+	font-weight: 200;
+	background-color: white;
+	border-radius: 14px;
+	border: 2px solid rgba(128, 128, 128, 0.12);
+}
+
+.input-repo input#repo-link:active,
+.input-repo input#repo-link:focus {
+	outline: none;
+}
+
+.input-repo input#repo-link:placeholder {
+	color: white;
 }
