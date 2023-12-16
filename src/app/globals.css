@@ -2,17 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-input[type="color"]{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-color: transparent;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+input[type="color"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
 }
 input[type="color"]::-webkit-color-swatch {
-    border-radius: 5px;
-    border: 2px solid black;
+  border-radius: 5px;
+  border: 2px solid black;
 }
 input[type="color"]::-moz-color-swatch {
-    border-radius: 5px;
-    border: 2px solid black;
+  border-radius: 5px;
+  border: 2px solid black;
 }

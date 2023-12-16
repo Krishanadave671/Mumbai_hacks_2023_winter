@@ -1,11 +1,11 @@
-'use client';
+"use client";
 import ResultVideo from "@/components/ResultVideo";
 import TranscriptionEditor from "@/components/TranscriptionEditor";
-import {clearTranscriptionItems} from "@/libs/awsTranscriptionHelpers";
+import { clearTranscriptionItems } from "@/libs/awsTranscriptionHelpers";
 import axios from "axios";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 
-export default function FilePage({params}) {
+export default function FilePage({ params }) {
   const filename = params.filename;
   const [isTranscribing, setIsTranscribing] = useState(false);
   const [isFetchingInfo, setIsFetchingInfo] = useState(false);
@@ -17,11 +17,11 @@ export default function FilePage({params}) {
 
   function getTranscription() {
     setIsFetchingInfo(true);
-    axios.get('/api/transcribe?filename='+filename).then(response => {
+    axios.get("/api/transcribe?filename=" + filename).then((response) => {
       setIsFetchingInfo(false);
       const status = response.data?.status;
       const transcription = response.data?.transcription;
-      if (status === 'IN_PROGRESS') {
+      if (status === "IN_PROGRESS") {
         setIsTranscribing(true);
         setTimeout(getTranscription, 3000);
       } else {
@@ -35,15 +35,11 @@ export default function FilePage({params}) {
   }
 
   if (isTranscribing) {
-    return (
-      <div>Transcribing your video...</div>
-    );
+    return <div>Transcribing your video...</div>;
   }
 
   if (isFetchingInfo) {
-    return (
-      <div>Fetching information...</div>
-    );
+    return <div>Fetching information...</div>;
   }
 
   return (
@@ -53,13 +49,15 @@ export default function FilePage({params}) {
           <h2 className="text-2xl mb-4 text-white/60">Transcription</h2>
           <TranscriptionEditor
             awsTranscriptionItems={awsTranscriptionItems}
-            setAwsTranscriptionItems={setAwsTranscriptionItems} />
+            setAwsTranscriptionItems={setAwsTranscriptionItems}
+          />
         </div>
         <div>
           <h2 className="text-2xl mb-4 text-white/60">Result</h2>
           <ResultVideo
             filename={filename}
-            transcriptionItems={awsTranscriptionItems} />
+            transcriptionItems={awsTranscriptionItems}
+          />
         </div>
       </div>
     </div>
