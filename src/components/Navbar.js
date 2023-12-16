@@ -8,7 +8,7 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo on the left */}
         <div className="text-black font-bold text-sm">
-          <a>
+          <a href="/">
             <Image
               src="/QuickShort-Logo-Black.png"
               alt="Description of the image"
