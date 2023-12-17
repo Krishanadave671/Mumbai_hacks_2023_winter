@@ -20,17 +20,17 @@ const Navbar = () => {
 
         {/* Navigation options on the right */}
         <div className="flex space-x-12">
-          <a href="#" className="text-gray-600 hover:text-gray-300">
+          <a href="/" className="text-gray-600 hover:text-gray-500">
             Home
           </a>
-          <a href="#" className="text-gray-600 hover:text-gray-300">
-            About
-          </a>
-          <a href="#" className="text-gray-600 hover:text-gray-300">
+          <a href="/" className="text-gray-600 hover:text-gray-500">
             Services
           </a>
-          <a href="#" className="text-gray-600 hover:text-gray-300">
-            Contact
+          <a href="/" className="text-gray-600 hover:text-gray-500">
+            Pricing
+          </a>
+          <a href="#" className="text-gray-600 hover:text-gray-500">
+            Contact us
           </a>
         </div>
       </div>
