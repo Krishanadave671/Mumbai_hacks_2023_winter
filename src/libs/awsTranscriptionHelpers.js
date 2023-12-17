@@ -10,7 +10,7 @@ export function clearTranscriptionItems(items) {
     const {start_time, end_time} = item;
     const content = item.alternatives[0].content;
     return {start_time, end_time, content}
-  });
+  }).filter(validItem => !!validItem)
 }
 
 function secondsToHHMMSSMS(timeString) {

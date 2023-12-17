@@ -27,9 +27,10 @@ export default function FilePage({ params }) {
       } else {
         setIsTranscribing(false);
 
-        setAwsTranscriptionItems(
-          clearTranscriptionItems(transcription.results.items)
-        );
+        if(transcription?.results?.items)
+          setAwsTranscriptionItems(
+            clearTranscriptionItems(transcription.results.items)
+          );
       }
     });
   }

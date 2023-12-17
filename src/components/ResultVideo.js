@@ -102,7 +102,7 @@ export default function ResultVideo({ filename, transcriptionItems }) {
           <span>Apply captions</span>
         </button>
       </div>
-      <div>
+      <div className="text-black">
         primary color:
         <input
           type="color"
