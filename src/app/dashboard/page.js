@@ -51,18 +51,20 @@ const Page = () => {
         </div>
         <div className="h-[1px] w-[full] bg-gray-300 mt-4"></div>
         <section className="flex justify-left mt-8 sm:mt-12 items-center gap-[6em]">
-          <div className="hidden sm:block bg-gray-800/50 w-[240px] rounded-xl overflow-hidden">
+          <div className="hidden sm:block bg-black w-[240px] rounded-xl aspect-[9/16] overflow-hidden">
             <video
-              src="https://dawid-epic-captions.s3.us-east-1.amazonaws.com/without-captions.mp4"
+              className="py-16 object-cover h-full"
+              src="https://hacks-dub-ai.s3.eu-north-1.amazonaws.com/4c6f6502-0239-4863-b079-464a1baa2ecb.mp4"
               preload={"true"}
               muted
               autoPlay
               loop
             ></video>
           </div>
-          <div className="hidden sm:block bg-gray-800/50 w-[240px] rounded-xl overflow-hidden">
+          <div className="hidden sm:block bg-black w-[240px] rounded-xl aspect-[9/16] overflow-hidden">
             <video
-              src="https://dawid-epic-captions.s3.us-east-1.amazonaws.com/without-captions.mp4"
+              className="py-16 object-cover h-full"
+              src="https://hacks-dub-ai.s3.eu-north-1.amazonaws.com/39aa0700-0084-496c-8fae-bd8d48c7cb40.mp4"
               preload={"true"}
               muted
               autoPlay
@@ -72,9 +74,10 @@ const Page = () => {
           {/* <div className="hidden sm:block">
             <SparklesIcon />
           </div> */}
-          <div className="bg-gray-800/50 w-[240px] rounded-xl overflow-hidden">
+          <div className="bg-black w-[240px] rounded-xl aspect-[9/16] overflow-hidden">
             <video
-              src="https://dawid-epic-captions.s3.us-east-1.amazonaws.com/with-captions.mp4"
+              className="py-16 object-cover h-full"
+              src="https://hacks-dub-ai.s3.eu-north-1.amazonaws.com/8b8cbfcf-0dce-42e3-85fa-b93609f2c589.mp4"
               preload={"true"}
               muted
               autoPlay
