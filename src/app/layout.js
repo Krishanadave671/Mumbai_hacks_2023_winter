@@ -17,10 +17,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
         // className={inter.className + " bg-gradient-to-b from-bg-gradient-from to-bg-gradient-to min-h-screen text-white"}
-        className={" min-h-screen text-white bg-gradient-animation"}
+        className={" text-white bg-gradient-animation"}
       >
         <Navbar />
-        <main className="p-4 max-w-4xl mx-auto">
+        <main className="p-4 mx-auto">
           {/* <header className="flex justify-between my-2 sm:my-8">
             <Link href="/" className="flex gap-1">
               <SparklesIcon />

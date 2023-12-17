@@ -2,12 +2,13 @@
 
 import React, { useRef, useState } from "react";
 import axios from "axios";
+import SparklesIcon from "./SparklesIcon";
 
 export function TryNow() {
   const [videoUrl, setVideoUrl] = useState("");
   const [shortsVideoUrls, setShortsVideoUrls] = useState([
-    "https://hacks-dub-ai.s3.eu-north-1.amazonaws.com/4c6f6502-0239-4863-b079-464a1baa2ecb.mp4",
-    "https://hacks-dub-ai.s3.eu-north-1.amazonaws.com/39aa0700-0084-496c-8fae-bd8d48c7cb40.mp4",
+    "https://hacks-dub-ai.s3.eu-north-1.amazonaws.com/155nlq907b1s.mp4",
+    "https://hacks-dub-ai.s3.eu-north-1.amazonaws.com/155nlq90pnqo.mp4",
     "https://hacks-dub-ai.s3.eu-north-1.amazonaws.com/8b8cbfcf-0dce-42e3-85fa-b93609f2c589.mp4",
   ]);
 
@@ -65,14 +66,17 @@ export function TryNow() {
         autoPlay={false}
         isShort={false}
       />
+      <div className="mx-auto w-16 h-16 mt-8">
+        <SparklesIcon />
+      </div>
 
-      <section className="flex justify-around gap-8 mt-8 sm:mt-12 items-center">
+      <section className="flex justify-around gap-8 mt-2 sm:mt-12 items-center">
         {shortsVideoUrls.map((shortVideo, index) => (
           <div
             key={shortVideo}
             className="hidden sm:block bg-black w-[240px] rounded-xl overflow-hidden"
           >
-            <ShowShortVideo video_url={shortVideo} autoPlay={index === 0} />
+            <ShowShortVideo video_url={shortVideo} autoPlay={false} />
           </div>
         ))}
       </section>
@@ -101,11 +105,11 @@ function ShowShortVideo({ video_url, autoPlay, isShort = true }) {
   return (
     <div
       className={`relative cursor-pointer ${
-        isShort ? "aspect-[9/16]" : "rounded-[20px] mt-20"
+        isShort ? "aspect-[9/16] w-full" : "rounded-[20px] mt-20"
       } overflow-hidden`}
     >
       <video
-        className={` ${isShort ? "py-16 object-cover h-full " : "w-full"}`}
+        className={` ${isShort ? "py-16 object-initial h-full" : "w-full"}`}
         ref={videoRef}
         src={video_url}
         autoPlay={autoPlay}

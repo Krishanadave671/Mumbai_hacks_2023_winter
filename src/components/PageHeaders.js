@@ -10,7 +10,7 @@ export default function PageHeaders({
       >
         {h1Text}
       </h1>
-      <h2 className="text-[#5F6167] text-sm sm:text-base">{h2Text}</h2>
+      <h2 className="text-[#5F6167] text-2xl">{h2Text}</h2>
     </section>
   );
 }
